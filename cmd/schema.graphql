@@ -1,0 +1,26 @@
+type Query {
+    getAccount(id: ID!): Account!
+}
+
+type Mutation {
+    createAccount(input: CreateAccountInput!): CreateAccountResponse!
+}
+
+## types
+
+type Account {
+    userName: String!
+    money: Int!
+}
+
+type CreateAccountResponse {
+    success: Boolean!
+    errorMessage: String
+}
+
+## input
+
+input CreateAccountInput {
+    userName: String!
+    password: String!
+}
